@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from 'chai';
@@ -16,3 +17,4 @@ describe('<FuelSavingsPage />', () => {
     expect(wrapper.find(FuelSavingsForm)).to.be.length(1);
   });
 });
+*/
