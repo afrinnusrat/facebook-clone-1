@@ -20,10 +20,10 @@ describe('Button',  () => {
   });
 
   it('should call the onClick passed via props on click', () => {
-    const mockFunction = sinon.spy();
-    const wrapper = shallow(<Button onClick={mockFunction} />);
+    const onClick = sinon.spy();
+    const wrapper = shallow(<Button onClick={onClick} />);
 
     wrapper.find('button').simulate('click');
-    expect(mockFunction.calledOnce).to.equal(true);
+    expect(onClick.calledOnce).to.equal(true);
   });
 });
