@@ -1,20 +1,32 @@
 import React, { Component, PropTypes } from 'react';
 
 class TextInput extends Component {
+  renderLabel() {
+    if (this.props.label) {
+      return <label htmlFor={this.props.id ? this.props.id : ''}>{this.props.label}</label>;
+    }
+  }
+
   render() {
     return (
-      <input
-        style={this.props.style ? this.props.style : ''}
-        value={this.props.value}
-        placeholder={this.props.placeholder ? this.props.placeholder : ''}
-        onChange={this.props.onChange}
-        type="text"
-      />
+      <g>
+        {this.renderLabel.bind(this)}
+        <input
+          id={this.props.id ? this.props.id : ''}
+          style={this.props.style ? this.props.style : ''}
+          value={this.props.value}
+          placeholder={this.props.placeholder ? this.props.placeholder : ''}
+          onChange={this.props.onChange}
+          type="text"
+        />        
+      </g>
     );
   }
 }
 
 TextInput.propTypes = {
+  label: PropTypes.string,
+  id: PropTypes.string,
   style: PropTypes.object,
   value: PropTypes.string,
   placeholder: PropTypes.string,

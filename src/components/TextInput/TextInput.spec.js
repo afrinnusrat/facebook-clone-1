@@ -26,7 +26,7 @@ describe('TextInput', () => {
     const onChange = sinon.spy();
     const wrapper = shallow(<TextInput onChange={onChange} />);
 
-    wrapper.simulate('change');
+    wrapper.find('input').simulate('change');
     expect(onChange.calledOnce).to.equal(true);
   });
 });
