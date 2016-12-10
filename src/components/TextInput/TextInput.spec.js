@@ -29,4 +29,26 @@ describe('TextInput', () => {
     wrapper.find('input').simulate('change');
     expect(onChange.calledOnce).to.equal(true);
   });
+
+  it('should render a label if a label prop is given', () => {
+    const label = 'test';
+    const wrapper = shallow(<TextInput label={label} />);
+
+    expect(wrapper.find('label').text()).to.equal(label);
+  });
+
+  it('should render an input tag with an id passed via the id prop', () => {
+    const id = 'test';
+    const wrapper = shallow(<TextInput id={id} />);
+
+    expect(wrapper.find(`input#${id}`)).to.have.length(1);
+  });
+
+  it('should render a label tag bound with htmlFor to the id passed via props', () => {
+    const label = 'test-label';
+    const id = 'test-id';
+    const wrapper = shallow(<TextInput label={label} id={id} />);
+
+    expect(wrapper.find('label').prop('htmlFor')).to.equal(id);
+  });
 });

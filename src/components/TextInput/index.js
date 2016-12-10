@@ -10,7 +10,7 @@ class TextInput extends Component {
   render() {
     return (
       <g>
-        {this.renderLabel.bind(this)}
+        {this.renderLabel.bind(this)()}
         <input
           id={this.props.id ? this.props.id : ''}
           style={this.props.style ? this.props.style : ''}
