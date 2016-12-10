@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import H1 from '../../components/H1';
+import Login from '../../components/Login';
 
 class HomePage extends Component {
   render() {
@@ -8,13 +9,13 @@ class HomePage extends Component {
       <div>
         <header>
           <H1 title="Facebook" />
+          <Login>
           {/*
-          <Connexion>
             <Input />
             <Input />
             <Button />
-          </Connexion>
-          */}
+          */}            
+          </Login>
         </header>
         {/*
         <main>
