@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
 
 import TextInput from './';
 
@@ -19,5 +20,13 @@ describe('TextInput', () => {
     const wrapper = shallow(<TextInput style={testStyle} />);
 
     expect(wrapper.find('input')).to.have.style('background-color', 'blue');
+  });
+
+  it('should call the onChange function passed via props on change', () => {
+    const onChange = sinon.spy();
+    const wrapper = shallow(<TextInput onChange={onChange} />);
+
+    wrapper.simulate('change');
+    expect(onChange.calledOnce).to.equal(true);
   });
 });
