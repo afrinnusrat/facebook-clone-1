@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import H1 from '../../components/H1';
 import Login from '../../components/Login';
+import TextInput from '../../components/TextInput';
 
 class HomePage extends Component {
   render() {
@@ -10,9 +11,9 @@ class HomePage extends Component {
         <header>
           <H1 title="Facebook" />
           <Login>
+            <TextInput />
+            <TextInput />
           {/*
-            <Input />
-            <Input />
             <Button />
           */}            
           </Login>
