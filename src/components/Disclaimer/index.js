@@ -1,8 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 
-import DisclaimerSection from '../DisclaimerSection';
+// import DisclaimerSection from '../DisclaimerSection';
 
 class Disclaimer extends Component {
+  /*
   renderDisclaimerSections() {
     this.props.disclaimer.sections.map((section) => {
       return (
@@ -10,13 +11,14 @@ class Disclaimer extends Component {
       );
     });
   }
+  */
   render() {
     return (
       <div className="disclaimer-container">
         <div className="disclaimer-title">
           <p>{this.props.disclaimer.title}</p>
         </div>
-        { this.renderDisclaimerSections.bind(this)() }
+        {/* this.renderDisclaimerSections.bind(this)() */}
       </div>
     );
   }
