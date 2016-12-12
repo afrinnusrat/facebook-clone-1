@@ -5,6 +5,8 @@ import Login from '../../components/Login';
 import TextInput from '../../components/TextInput';
 import Button from '../../components/Button';
 import Disclaimer from '../../components/Disclaimer';
+import SignUpContainer from '../../components/SignUpContainer';
+import SignUpForm from '../../components/SignUpForm';
 
 class HomePage extends Component {
   render() {
@@ -21,22 +23,21 @@ class HomePage extends Component {
         
         <main>
           <Disclaimer />
-        {/*
-          <SignUp>
-            <SignUpTitle />
+          <SignUpContainer>
             <SignUpForm>
-              <Input />
-              <Input />
-              <Input />
-              <Input />
-              <Input />
+              <TextInput />
+              <TextInput />
+              <TextInput />
+              <TextInput />
+              <TextInput />
+              {/*
               <Select />
               <Radio />
               <Radio />
+              */}
               <Button />
             </SignUpForm>
-          </SignUp>
-        */}
+          </SignUpContainer>
         </main>
         {/*
         <Footer>
