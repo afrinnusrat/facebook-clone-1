@@ -4,6 +4,7 @@ import H1 from '../../components/H1';
 import Login from '../../components/Login';
 import TextInput from '../../components/TextInput';
 import Button from '../../components/Button';
+import Disclaimer from '../../components/Disclaimer';
 
 class HomePage extends Component {
   render() {
@@ -17,9 +18,10 @@ class HomePage extends Component {
             <Button />           
           </Login>
         </header>
-        {/*
+        
         <main>
           <Disclaimer />
+        {/*
           <SignUp>
             <SignUpTitle />
             <SignUpForm>
@@ -34,7 +36,9 @@ class HomePage extends Component {
               <Button />
             </SignUpForm>
           </SignUp>
+        */}
         </main>
+        {/*
         <Footer>
           <Navigation />
           <Navigation />
