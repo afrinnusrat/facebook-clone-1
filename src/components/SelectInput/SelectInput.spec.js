@@ -9,7 +9,7 @@ describe('SelectInput', () => {
   let style;
   let options;
   beforeEach(() => {
-    style = { 'background-color': 'blue'};
+    style = { backgroundColor: 'blue'};
     options = [
       { value: 'test' },
       { value: 'test2' },

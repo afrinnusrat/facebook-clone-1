@@ -19,7 +19,7 @@ class SelectInput extends Component {
 }
 
 SelectInput.propTypes = {
-  options: PropTypes.object,
+  options: PropTypes.array,
   style: PropTypes.object,
 };
 
