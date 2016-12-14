@@ -10,7 +10,8 @@ class SelectInput extends Component {
 
   render() {
     return (
-      <select name="" id="">
+      <select 
+        style={this.props.style ? this.props.style : ''}>
         {this.renderOptions.bind(this, this.props.options)()}
       </select>
     );   
@@ -19,6 +20,7 @@ class SelectInput extends Component {
 
 SelectInput.propTypes = {
   options: PropTypes.object,
+  style: PropTypes.object,
 };
 
 export default SelectInput;

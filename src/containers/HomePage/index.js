@@ -7,6 +7,7 @@ import Button from '../../components/Button';
 import Disclaimer from '../../components/Disclaimer';
 import SignUpContainer from '../../components/SignUpContainer';
 import SignUpForm from '../../components/SignUpForm';
+import SelectInput from '../../components/SelectInput';
 
 class HomePage extends Component {
   render() {
@@ -30,8 +31,10 @@ class HomePage extends Component {
               <TextInput />
               <TextInput />
               <TextInput />
+              <SelectInput />
+              <SelectInput />
+              <SelectInput />
               {/*
-              <Select />
               <Radio />
               <Radio />
               */}
