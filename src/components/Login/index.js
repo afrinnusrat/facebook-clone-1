@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 
-class Login extends Component {
-  render() {
-    return (
-      <g>
-        {this.props.children}
-      </g>
-    );
-  }
-}
+const Login = (props) => {
+  return (
+    <g>
+      {props.children}
+    </g>
+  );
+};
+
+Login.propTypes = {
+  children: PropTypes.array,
+}; 
 
 export default Login;
