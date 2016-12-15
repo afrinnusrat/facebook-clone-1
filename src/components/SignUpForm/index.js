@@ -9,7 +9,7 @@ const SignUpForm = (props) => {
 };
 
 SignUpForm.propTypes = {
-  children: PropTypes.nodes,
+  children: PropTypes.array,
 };
 
 export default SignUpForm;

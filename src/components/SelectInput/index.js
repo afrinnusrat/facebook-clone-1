@@ -5,13 +5,13 @@ class SelectInput extends Component {
     const optionNodes = options.map((option) => {
       return <option key={option.value} value={option.value}>option.value</option>;
     });
-    return <div>{optionNodes}</div>;
+    return [optionNodes];
   }
 
   render() {
     return (
       <select 
-        style={this.props.style ? this.props.style : ''}>
+        style={this.props.style ? this.props.style : null}>
         {this.renderOptions.bind(this, this.props.options)()}
       </select>
     );   

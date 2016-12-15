@@ -9,7 +9,7 @@ const SignUpContainer = (props) => {
 };
 
 SignUpContainer.propTypes = {
-  children: PropTypes.nodes,
+  children: PropTypes.object,
 };
 
 export default SignUpContainer;
