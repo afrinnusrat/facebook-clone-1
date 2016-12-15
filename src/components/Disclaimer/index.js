@@ -6,7 +6,7 @@ class Disclaimer extends Component {
   renderDisclaimerSections() {
     const sections = this.props.disclaimer.sections.map((section) => {
       return (
-        <DisclaimerSection key={section.text} image={section.image} text={section.text} />
+        <DisclaimerSection key={section.text} image={section.image} textBold={section.textBold} text={section.text} />
       );
     });
     return <div>{sections}</div>;

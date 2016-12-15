@@ -7,6 +7,7 @@ const DisclaimerSection = (props) => {
         <img src={props.image} alt={`An image illustrating ${props.text}`} />
       </div>
       <div className="disclaimer-section-text">
+        <p><b>{props.textBold}</b></p>
         <p>{props.text}</p>
       </div>
     </div>
@@ -15,6 +16,7 @@ const DisclaimerSection = (props) => {
 
 DisclaimerSection.propTypes = {
   image: PropTypes.string,
+  textBold: PropTypes.string,
   text: PropTypes.string,
 };
 
