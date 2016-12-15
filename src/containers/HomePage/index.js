@@ -10,6 +10,28 @@ import SignUpForm from '../../components/SignUpForm';
 import SelectInput from '../../components/SelectInput';
 
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sections: [
+        {
+          textBold: 'See photos and updates ',
+          text: 'from friends in News Feed.',
+          image: 'http://www4.ac-nancy-metz.fr/clg-p-e-victor-corcieux/new/wp-content/uploads/th1.jpg'
+        },
+        {
+          textBold: "Share what's new ",
+          text: 'in your life on your Timeline.',
+          image: 'http://www4.ac-nancy-metz.fr/clg-p-e-victor-corcieux/new/wp-content/uploads/th1.jpg'
+        },
+        {
+          textBold: 'Find more ',
+          text: "of what you're looking for with Facebook Search.",
+          image: 'http://www4.ac-nancy-metz.fr/clg-p-e-victor-corcieux/new/wp-content/uploads/th1.jpg'
+        },   
+      ],
+    };
+  }
   render() {
     return (
       <div>

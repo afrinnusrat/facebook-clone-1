@@ -12,10 +12,10 @@ class TextInput extends Component {
       <g>
         {this.renderLabel.bind(this)()}
         <input
-          id={this.props.id ? this.props.id : ''}
-          style={this.props.style ? this.props.style : ''}
+          id={this.props.id ? this.props.id : null}
+          style={this.props.style ? this.props.style : null}
           value={this.props.value}
-          placeholder={this.props.placeholder ? this.props.placeholder : ''}
+          placeholder={this.props.placeholder ? this.props.placeholder : null}
           onChange={this.props.onChange}
           type="text"
         />        
