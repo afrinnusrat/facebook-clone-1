@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import { connect } from 'react-redux';
 
 import H1 from '../../components/H1';
 import Login from '../../components/Login';
@@ -8,11 +9,18 @@ import Disclaimer from '../../components/Disclaimer';
 import SignUpContainer from '../../components/SignUpContainer';
 import SignUpForm from '../../components/SignUpForm';
 import SelectInput from '../../components/SelectInput';
+import RadioInput from '../../components/RadioInput';
 
 class HomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      login: {
+        email: {
+          label: 'Email or Phone',
+          id: 'login-email',
+        }
+      },
       disclaimer: {
         title: "Connect with friends and the world around you on Facebook.",
         sections: [
@@ -47,7 +55,7 @@ class HomePage extends Component {
         <header>
           <H1 title="Facebook" />
           <Login>
-            <TextInput />
+            <TextInput label={this.state.login.email} />
             <TextInput />
             <Button />           
           </Login>
@@ -65,10 +73,8 @@ class HomePage extends Component {
               <SelectInput options={this.state.selectMonth} />
               <SelectInput options={this.state.selectDay} />
               <SelectInput options={this.state.selectYear} />
-              {/*
-              <Radio />
-              <Radio />
-              */}
+              <RadioInput />
+              <RadioInput />
               <Button />
             </SignUpForm>
           </SignUpContainer>

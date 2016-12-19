@@ -29,6 +29,17 @@ describe('RadioInput', () => {
     expect(wrapper.find('radio')).to.have.length(1);
   });
 
-  it('should have a sty')
+  it('should have a style value set via the style prop', () => {
+    expect(wrapper.find('radio')).to.have.style('background-color', 'blue');
+  });
 
+  it('should have a value set via the value prop', () => {
+    expect(wrapper.find('radio').text()).to.equal(value);
+  });
+
+  it('should call onChange on change', () => {
+    wrapper.find('radio').simulate('change');
+
+    expect(onChange.calledOnce).to.equal(true);
+  });
 });

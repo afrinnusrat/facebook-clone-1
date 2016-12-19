@@ -9,7 +9,7 @@ const Login = (props) => {
 };
 
 Login.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.object,
 }; 
 
 export default Login;

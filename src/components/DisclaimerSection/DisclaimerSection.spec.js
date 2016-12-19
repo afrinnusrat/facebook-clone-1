@@ -7,12 +7,14 @@ import DisclaimerSection from './';
 describe('DisclaimerSection', () => {
   let wrapper;
   let testText;
+  let testTextBold;
   let testImage;
 
   beforeEach(() => {
     testText = 'test';
+    testTextBold= 'testBold';
     testImage = 'http://www4.ac-nancy-metz.fr/clg-p-e-victor-corcieux/new/wp-content/uploads/th1.jpg';
-    wrapper = shallow(<DisclaimerSection text={testText} image={testImage} />);
+    wrapper = shallow(<DisclaimerSection textBold={testTextBold} text={testText} image={testImage} />);
   });
 
   it('should render a div having a disclaimer-section class', () => {
@@ -31,7 +33,7 @@ describe('DisclaimerSection', () => {
     expect(wrapper.find('div.disclaimer-section-text')).to.have.length(1);
   });
 
-  it('should render a p tag having its value set to the text prop', () => {
-    expect(wrapper.find('div.disclaimer-section-text p').text()).to.equal(testText);
+  it('should render a first p tag having its value set via the textBold prop', () => {
+    expect(wrapper.find('div.disclaimer-section-text p').first().text()).to.equal(testTextBold);
   });
 });

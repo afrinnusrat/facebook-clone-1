@@ -25,7 +25,7 @@ class TextInput extends Component {
 }
 
 TextInput.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.object,
   id: PropTypes.string,
   style: PropTypes.object,
   value: PropTypes.string,

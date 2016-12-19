@@ -12,6 +12,7 @@ class RadioInput extends Component {
 }
 
 RadioInput.propTypes = {
+  style: PropTypes.object,
   value: PropTypes.string,
   onChange: PropTypes.func,
 };
